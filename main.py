@@ -21,6 +21,7 @@ pdf.set_draw_color(0,0,255)
 
 #Alinhar texto de cells
 pdf.cell(w=0, h=8, txt="Something on center", align="C", border=1, ln=1)
+
 #Adicionar link
 pdf.set_font(family="Arial", style="I", size=13 )
 pdf.cell(w=0, h=8, txt="My github", align="R", border=0, link="www.github.com/truelanz", ln=1)
