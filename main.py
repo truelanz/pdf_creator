@@ -5,15 +5,6 @@ pdf = FPDF("P", "mm", "A4")
 w = 210
 h = 297
 
-# CREATE HEADER AND FOOTER
-class FPDF(FPDF):
-    
-    def header(self):
-        self.set_font(family="Arial", style="U", size=11)
-        self.cell(0, 5, "This is a Header", align="C", border=1, ln=1)
-        
-    def footer(self):
-        pass
 pdf.set_font(family="Arial", style="B", size=16 )
 pdf.set_margins(0, 0, 0)
 
@@ -21,6 +12,13 @@ pdf.set_margins(0, 0, 0)
 #Page 1
 pdf.add_page()
 pdf.cell(w=22, h=8, txt="Page 1", border=1, ln=1) # 1 true 0 false
+
+#Setar cor do texto daqui para baixo
+pdf.set_text_color(255, 0, 0)
+
+#Setar cor das borders
+pdf.set_draw_color(0,0,255)
+
 #Alinhar texto de cells
 pdf.cell(w=0, h=8, txt="Something on center", align="C", border=1, ln=1)
 #Adicionar link
