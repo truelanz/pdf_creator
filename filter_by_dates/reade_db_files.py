@@ -99,7 +99,7 @@ def join_tables(filter="all", month=None, year=None):
             pdf.ln()
 
 
-join_tables("mes_anterior")
+join_tables("hoje")
 
 # Salvar o PDF
 pdf.output("readFromDB.pdf")
